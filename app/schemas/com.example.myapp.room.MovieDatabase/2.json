@@ -1,0 +1,112 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "4b256c6e615776ea788416d48f8c39d7",
+    "entities": [
+      {
+        "tableName": "movies",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`Title` TEXT, `Year` TEXT, `Summary` TEXT, `Short_Summary` TEXT, `Genres` TEXT, `IMDBID` TEXT NOT NULL, `Runtime` TEXT, `YouTube_Trailer` TEXT, `Rating` TEXT, `Movie_Poster` TEXT, `Director` TEXT, `Writers` TEXT, `Cast` TEXT, `isFavourite` INTEGER NOT NULL, PRIMARY KEY(`IMDBID`))",
+        "fields": [
+          {
+            "fieldPath": "Title",
+            "columnName": "Title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Year",
+            "columnName": "Year",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Summary",
+            "columnName": "Summary",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Short_Summary",
+            "columnName": "Short_Summary",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Genres",
+            "columnName": "Genres",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "IMDBID",
+            "columnName": "IMDBID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Runtime",
+            "columnName": "Runtime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "YouTube_Trailer",
+            "columnName": "YouTube_Trailer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Rating",
+            "columnName": "Rating",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Movie_Poster",
+            "columnName": "Movie_Poster",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Director",
+            "columnName": "Director",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Writers",
+            "columnName": "Writers",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "Cast",
+            "columnName": "Cast",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isFavourite",
+            "columnName": "isFavourite",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "IMDBID"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4b256c6e615776ea788416d48f8c39d7')"
+    ]
+  }
+}
